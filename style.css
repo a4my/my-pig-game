@@ -241,6 +241,32 @@ main {
   z-index: 5;
 }
 
-.hidden {
-  display: none
+
+/* Score selection */
+
+.score-window {
+  position: absolute;
+  top: 6rem;
+  right: 1rem;
+  background-color: white;
+  display: flex;
+  border-radius: 50rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 2.5rem;
+  z-index: 10;
+}
+
+.score-window p {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 1.8rem;
+  padding-right: 0.7rem;
+}
+
+.score-window input {
+  width: 30px;
+  border: none;
+  font-size: 1.8rem;
+  padding-top: 0.2rem;
+  
 }

@@ -1,37 +1,5 @@
 'use strict'
 
-// Modal button
-
-const modal = document.querySelector('.modal')
-const overlay = document.querySelector('.overlay')
-const btnCloseModal = document.querySelector('.close-modal')
-const btnsOpenModal = document.querySelectorAll('.show-modal')
-
-const openModal = function() {
-  modal.classList.remove('hidden')
-  overlay.classList.remove('hidden')
-}
-
-const closeModal = function() {
-  modal.classList.add('hidden')
-  overlay.classList.add('hidden')
-}
-
-for(let i = 0; i < btnsOpenModal.length; i++) {
-  btnsOpenModal[i].addEventListener('click', openModal)
-  btnCloseModal.addEventListener('click', closeModal)
-  overlay.addEventListener('click', closeModal)
-}
-
-document.addEventListener('keydown', function(e) {
-  // console.log(e.key)
-
-  if(e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal()
-  }
-})
-
-
 // Selecting elements
 const player0El = document.querySelector('.player--0')
 const player1El = document.querySelector('.player--1')
@@ -44,6 +12,16 @@ const diceEl = document.querySelector('.dice')
 const btnNew = document.querySelector('.btn--new')
 const btnRoll = document.querySelector('.btn--roll')
 const btnHold = document.querySelector('.btn--hold')
+
+const btnSet = document.querySelector('.btn--set')
+let scoreTarget;
+
+btnSet.addEventListener('click', function(){
+  let selectedScore = document.querySelector('.select-score').value
+  scoreTarget = parseInt(selectedScore)
+  console.log(scoreTarget)
+})
+
 
 //Starting conditions
 
@@ -116,7 +94,7 @@ btnHold.addEventListener('click', function() {
     document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer]
 
     // 2. Check if player's score is >= 30
-    if(scores[activePlayer] >= 30) {
+    if(scores[activePlayer] >= scoreTarget) {
       // Finish the game
       playing = false
       diceEl.classList.add('hidden')
@@ -132,3 +110,36 @@ btnHold.addEventListener('click', function() {
 
 //New game functionality
 btnNew.addEventListener('click', init)
+
+
+
+// Modal button
+
+const modal = document.querySelector('.modal')
+const overlay = document.querySelector('.overlay')
+const btnCloseModal = document.querySelector('.close-modal')
+const btnsOpenModal = document.querySelectorAll('.show-modal')
+
+const openModal = function() {
+  modal.classList.remove('hidden')
+  overlay.classList.remove('hidden')
+}
+
+const closeModal = function() {
+  modal.classList.add('hidden')
+  overlay.classList.add('hidden')
+}
+
+for(let i = 0; i < btnsOpenModal.length; i++) {
+  btnsOpenModal[i].addEventListener('click', openModal)
+  btnCloseModal.addEventListener('click', closeModal)
+  overlay.addEventListener('click', closeModal)
+}
+
+document.addEventListener('keydown', function(e) {
+  // console.log(e.key)
+
+  if(e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal()
+  }
+})
