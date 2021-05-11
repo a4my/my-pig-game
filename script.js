@@ -14,7 +14,7 @@ const btnRoll = document.querySelector('.btn--roll')
 const btnHold = document.querySelector('.btn--hold')
 
 const btnSet = document.querySelector('.btn--set')
-let scoreTarget;
+let scoreTarget = 20;
 
 btnSet.addEventListener('click', function(){
   let selectedScore = document.querySelector('.select-score').value
@@ -114,7 +114,26 @@ btnHold.addEventListener('click', holdScore)
 //New game functionality
 btnNew.addEventListener('click', init)
 
+// Press TAB button = New Game
+document.addEventListener('keydown', function(newKey) {
+  if(newKey.key === 'Shift' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+   init()
+ }
+})  
 
+// Press ENTER button = Roll Dice
+document.addEventListener('keydown', function(rollKey) {
+  if(rollKey.key === 'Enter' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+   rollDice()
+ }
+}) 
+
+// Press Space button = Hold Current Score
+document.addEventListener('keydown', function(holdKey) {
+  if(holdKey.code === 'Space' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+   holdScore()
+ }     
+})  
 
 // Modal Button Rules
 
@@ -147,27 +166,7 @@ document.addEventListener('keydown', function(e) {
   }
 })
 
-// Press TAB button = New Game
-document.addEventListener('keydown', function(newKey) {
-   if(newKey.key === 'Tab' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
-    init()
-  }
-})  
-
-// Press ENTER button = Roll Dice
-document.addEventListener('keydown', function(rollKey) {
-   if(rollKey.key === 'Enter' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
-    rollDice()
-  }
-}) 
-
-// Press Space button = Hold Current Score
-document.addEventListener('keydown', function(holdKey) {
-   if(holdKey.code === 'Space' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
-    holdScore()
-  }     
-})    
-
+ 
 
 // Modal Button Options
 
