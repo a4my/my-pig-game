@@ -19,7 +19,6 @@ let scoreTarget;
 btnSet.addEventListener('click', function(){
   let selectedScore = document.querySelector('.select-score').value
   scoreTarget = parseInt(selectedScore)
-  console.log(scoreTarget)
 })
 
 

@@ -266,10 +266,12 @@ main {
 }
 
 .score-window input {
-  width: 30px;
+  width: 35px;
   border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
   font-size: 1.8rem;
-  /* padding-top: 0.2rem; */  
+  padding-right: 0.2rem;  
 }
 
 .btn--set {
@@ -280,4 +282,5 @@ main {
   border-radius: 50rem;
   cursor: pointer;
   font-size: 1.8rem;
+  margin-left: 1.5rem;
 }
