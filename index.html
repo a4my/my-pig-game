@@ -38,24 +38,25 @@
     <button class="show-modal-1">❗ Options</button>
 
     <div class="table-info">
-      <div class="target-container">
-        <p>🎯 Score Target:</p>
+      <div class="info-container">
+        <p class="target">🎯 Score Target:</p>
         <p id="score-target">score</p>
       </div>
-      <table>
-        <tr>
-          <th>Players</th>
-          <th>Games won</th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
+      <div class="info-container">
+        <p>🏆 Games won:</p>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <td id="field-player-0">Player 1</td>
+            <td id="field-game-0">0</td>
+          </tr>
+          <tr>
+            <td id="field-player-1">Player 2</td>
+            <td id="field-game-1">0</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div class="modal hidden">
@@ -67,10 +68,10 @@
       <p>🍀 Or roll the dice again if you feel lucky and want to increase your current value</p>
       <p>❗❗ If you roll a 1 you will lose your current value</p>
       <p>🏆 First player to reach the score target wins</p>
-      <h1>Tips</h1>
+      <!-- <h1>Tips</h1>
       <p>🎲Press ENTER to roll the dice</p>
       <p>✋Press SPACE to hold your current value</p>
-      <p>🔁Press SHIFT to play a new game</p>
+      <p>🔁Press SHIFT to play a new game</p> -->
     </div>
 
     <div class="modal-1 hidden">

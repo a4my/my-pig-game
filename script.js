@@ -18,22 +18,38 @@ const name1El = document.getElementById('name--1')
 const btnSet0 = document.getElementById('btn--set0')
 const btnSet1 = document.getElementById('btn--set1')
 
+const fieldPlayer0 = document.getElementById('field-player-0')
+const fieldGame0 = document.getElementById('field-game-0')
+const fieldPlayer1 = document.getElementById('field-player-1')
+const fieldGame1 = document.getElementById('field-game-1')
+
 const displayTarget = document.getElementById('score-target')
 
+//Display score target
 const btnSet = document.querySelector('.btn--set')
 let scoreTarget = 20;
 displayTarget.textContent = scoreTarget
+
+//Update score board functionality
+let gameWon = [0, 0]
+const updateScore = function() {
+  gameWon[activePlayer] += 1
+  document.getElementById(`field-game-${activePlayer}`).textContent = gameWon[activePlayer]
+}
 
 // Player 1 naming functionality
 btnSet0.addEventListener('click', function () {
   let selectName0 = document.getElementById('select-name-0').value
   name0El.textContent = selectName0
+  fieldPlayer0.textContent = selectName0
 })
 
 // Player 2 naming functionality
 btnSet1.addEventListener('click', function () {
   let selectName1 = document.getElementById('select-name-1').value
   name1El.textContent = selectName1
+  fieldPlayer1.textContent = selectName1
+
 })
 
 // Score target functionality
@@ -105,6 +121,7 @@ const holdScore = function() {
       diceEl.classList.add('hidden')
       document.querySelector(`.player--${activePlayer}`).classList.add('player--winner')
       document.querySelector(`.player--${activePlayer}`).classList.remove('player--active')
+      updateScore()
       // document.getElementById(`name--${activePlayer}`).textContent = 'YOU WIN!'
     } else {
     // Switch to the next player
@@ -136,26 +153,26 @@ btnHold.addEventListener('click', holdScore)
 //New game functionality
 btnNew.addEventListener('click', init)
 
-// Press TAB button = New Game
-document.addEventListener('keydown', function(newKey) {
-  if(newKey.key === 'Shift' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
-   init()
- }
-})  
+// // Press TAB button = New Game
+// document.addEventListener('keydown', function(newKey) {
+//   if(newKey.key === 'Shift' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+//    init()
+//  }
+// })  
 
-// Press ENTER button = Roll Dice
-document.addEventListener('keydown', function(rollKey) {
-  if(rollKey.key === 'Enter' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
-   rollDice()
- }
-}) 
+// // Press ENTER button = Roll Dice
+// document.addEventListener('keydown', function(rollKey) {
+//   if(rollKey.key === 'Enter' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+//    rollDice()
+//  }
+// }) 
 
-// Press Space button = Hold Current Score
-document.addEventListener('keydown', function(holdKey) {
-  if(holdKey.code === 'Space' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
-   holdScore()
- }     
-})  
+// // Press Space button = Hold Current Score
+// document.addEventListener('keydown', function(holdKey) {
+//   if(holdKey.code === 'Space' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+//    holdScore()
+//  }     
+// })  
 
 // Modal Button Rules
 
