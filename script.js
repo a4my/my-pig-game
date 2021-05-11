@@ -13,9 +13,27 @@ const btnNew = document.querySelector('.btn--new')
 const btnRoll = document.querySelector('.btn--roll')
 const btnHold = document.querySelector('.btn--hold')
 
+const name0El = document.getElementById('name--0')
+const name1El = document.getElementById('name--1')
+const btnSet0 = document.getElementById('btn--set0')
+const btnSet1 = document.getElementById('btn--set1')
+
 const btnSet = document.querySelector('.btn--set')
 let scoreTarget = 20;
 
+// Player 1 naming functionality
+btnSet0.addEventListener('click', function () {
+  let selectName0 = document.getElementById('select-name-0').value
+  name0El.textContent = selectName0
+})
+
+// Player 2 naming functionality
+btnSet1.addEventListener('click', function () {
+  let selectName1 = document.getElementById('select-name-1').value
+  name1El.textContent = selectName1
+})
+
+// Score target functionality
 btnSet.addEventListener('click', function(){
   let selectedScore = document.querySelector('.select-score').value
   scoreTarget = parseInt(selectedScore)

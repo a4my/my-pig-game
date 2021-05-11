@@ -289,6 +289,10 @@ main {
   margin-top: 4rem;
 }
 
+.modal-1 h1:last-of-type {
+  margin-top: 4rem;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -341,7 +345,6 @@ main {
 .btn--set {
   background-color: #fff;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-
   color:#000; 
   padding: 0.7rem;
   text-transform: uppercase;
@@ -359,4 +362,27 @@ main {
 
 .btn--set:active {
   transform: translateY(3px) ;
+}
+
+/* Player name selection */
+
+.player-container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.player-container p {
+  margin-right: 1.5rem;
+}
+
+.player-container input {
+  width: 150px;
+  height: 20px;
+  outline: none;
+  border: none;
+  font-size: 1.8rem; 
+  margin-top: 12px;
+  padding: 1.2rem 0.7rem;
+  background-color: #ddd;
+  color: #000;
 }
