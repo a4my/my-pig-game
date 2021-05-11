@@ -18,8 +18,11 @@ const name1El = document.getElementById('name--1')
 const btnSet0 = document.getElementById('btn--set0')
 const btnSet1 = document.getElementById('btn--set1')
 
+const displayTarget = document.getElementById('score-target')
+
 const btnSet = document.querySelector('.btn--set')
 let scoreTarget = 20;
+displayTarget.textContent = scoreTarget
 
 // Player 1 naming functionality
 btnSet0.addEventListener('click', function () {
@@ -37,6 +40,7 @@ btnSet1.addEventListener('click', function () {
 btnSet.addEventListener('click', function(){
   let selectedScore = document.querySelector('.select-score').value
   scoreTarget = parseInt(selectedScore)
+  displayTarget.textContent = scoreTarget
 })
 
 

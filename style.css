@@ -386,3 +386,30 @@ main {
   background-color: #ddd;
   color: #000;
 }
+
+/* Table info */
+
+.table-info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  border-collapse: collapse;
+  width: 300px;
+  padding: 3rem;
+}
+
+.target-container{
+  display: flex;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.target-container p:last-of-type{
+  margin-left: 1.5rem;
+}
