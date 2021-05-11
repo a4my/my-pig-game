@@ -35,11 +35,13 @@
     </main>
 
     <button class="show-modal">❔ Rules</button>
-    <div class="score-window">
+    <button class="show-modal-1">❗ Options</button>
+
+    <!-- <div class="score-window">
       <p class="score-window__title">🎯 Score:</p>
       <input class="select-score" type="text">
       <button class="btn--set">Set!</button>
-    </div>
+    </div> -->
 
     <div class="modal hidden">
       <button class="close-modal">&times;</button>
@@ -50,13 +52,26 @@
       <p>🍀 Or roll the dice again if you feel lucky and want to increase your current value</p>
       <p>❗❗ If you roll a 1 you will lose your current value</p>
       <p>🏆 First player to reach the score target wins</p>
-      <!-- <h1>Tips</h1>
+      <h1>Tips</h1>
       <p>🎲Press ENTER to roll the dice</p>
       <p>✋Press SPACE to hold your current value</p>
-      <p>🔁Press TAB to play a new game</p> -->
+      <p>🔁Press TAB to play a new game</p>
+    </div>
+
+    <div class="modal-1 hidden">
+      <button class="close-modal-1">&times;</button>
+      <h1>🎯 Select your score target:</h1>
+      <div class="score-window">
+        <p class="score-window__title">Score:</p>
+        <input class="select-score" type="text" value="20">
+        <button class="btn--set">Set!</button>
+      </div>
+      <!--<h1>Tips</h1> -->
+      
     </div>
 
     <div class="overlay hidden"></div>
+    <div class="overlay-1 hidden"></div>
 
     <script src="script.js"></script>
   </body>

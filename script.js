@@ -53,22 +53,7 @@ const init = function() {
 
 init()
 
-const switchPlayer = function() {
-  document.getElementById(`current--${activePlayer}`).textContent = 0
-  currentScore = 0
-  activePlayer = activePlayer === 0 ? 1 : 0
-  player0El.classList.toggle('player--active')
-  player1El.classList.toggle('player--active')
-}
-
-if(activePlayer === 0) {
-  player0El.classList.add('player--active')
-} else {
-  player1El.classList.add('player--active')
-}
-
-//Rolling dice functionality
-btnRoll.addEventListener('click', function() {
+const rollDice = function() {
   if(playing) {
     // 1. Generating a random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1
@@ -83,10 +68,9 @@ btnRoll.addEventListener('click', function() {
       switchPlayer()
     }
   }
-})
+}
 
-// Holding score functionality
-btnHold.addEventListener('click', function() {
+const holdScore = function() {
   if (playing) {
     // 1. Add current score to active player's score
     scores[activePlayer] += currentScore
@@ -105,14 +89,34 @@ btnHold.addEventListener('click', function() {
     switchPlayer()
     }
   }
-})
+}
+
+const switchPlayer = function() {
+  document.getElementById(`current--${activePlayer}`).textContent = 0
+  currentScore = 0
+  activePlayer = activePlayer === 0 ? 1 : 0
+  player0El.classList.toggle('player--active')
+  player1El.classList.toggle('player--active')
+}
+
+if(activePlayer === 0) {
+  player0El.classList.add('player--active')
+} else {
+  player1El.classList.add('player--active')
+}
+
+//Rolling dice functionality
+btnRoll.addEventListener('click', rollDice)
+
+// Holding score functionality
+btnHold.addEventListener('click', holdScore)
 
 //New game functionality
 btnNew.addEventListener('click', init)
 
 
 
-// Modal button
+// Modal Button Rules
 
 const modal = document.querySelector('.modal')
 const overlay = document.querySelector('.overlay')
@@ -140,5 +144,58 @@ document.addEventListener('keydown', function(e) {
 
   if(e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal()
+  }
+})
+
+// Press TAB button = New Game
+document.addEventListener('keydown', function(newKey) {
+   if(newKey.key === 'Tab' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+    init()
+  }
+})  
+
+// Press ENTER button = Roll Dice
+document.addEventListener('keydown', function(rollKey) {
+   if(rollKey.key === 'Enter' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+    rollDice()
+  }
+}) 
+
+// Press Space button = Hold Current Score
+document.addEventListener('keydown', function(holdKey) {
+   if(holdKey.code === 'Space' && modal.classList.contains('hidden') && modal1.classList.contains('hidden')) {
+    holdScore()
+  }     
+})    
+
+
+// Modal Button Options
+
+const modal1 = document.querySelector('.modal-1')
+const overlay1 = document.querySelector('.overlay-1')
+const btnCloseModal1 = document.querySelector('.close-modal-1')
+const btnsOpenModal1 = document.querySelectorAll('.show-modal-1')
+
+const openModal1 = function() {
+  modal1.classList.remove('hidden')
+  overlay1.classList.remove('hidden')
+}
+
+const closeModal1 = function() {
+  modal1.classList.add('hidden')
+  overlay1.classList.add('hidden')
+}
+
+for(let x = 0; x < btnsOpenModal1.length; x++) {
+  btnsOpenModal1[x].addEventListener('click', openModal1)
+  btnCloseModal1.addEventListener('click', closeModal1)
+  overlay1.addEventListener('click', closeModal1)
+}
+
+document.addEventListener('keydown', function(event) {
+  // console.log(e.key)
+
+  if(event.key === 'Escape' && !modal1.classList.contains('hidden')) {
+    closeModal1()
   }
 })
