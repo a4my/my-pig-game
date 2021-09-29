@@ -411,18 +411,33 @@ main {
 
 @media only screen and (max-width: 1640px) {
   .table-info {
-    /* left: 50%;
-    top: 100%; */
+    left: 50%;
+    top: unset;
+    right: unset;
+    bottom: 0;
     transform: translate(-50%, -70%);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 1000px;
-    height: 200px;
+    height: 80px;
   }
   .main {
     height: 60rem;
     width: 70rem;
+  }
+  .table-info table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .table-info table tr {
+    display: table-cell;
+    padding: 0;
+    width: 150px;
+  }
+  .table-info table td {
+    padding: 1rem;
   }
 }
 
