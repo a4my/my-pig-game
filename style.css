@@ -170,7 +170,6 @@ main {
   color: #7c46bb;
 }
 
-
 /* MODAL BUTTON */
 
 .show-modal {
@@ -203,6 +202,13 @@ main {
   color: #444;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+@media only screen and (max-width: 1640px) {
+  .show-modal-1 {
+    top: 1rem;
+    right: 15.5rem;
+  }
 }
 
 .show-modal:focus {
@@ -262,8 +268,8 @@ main {
 }
 
 .modal p {
-    font-size: 1.8rem;
-    margin: 1rem 0;
+  font-size: 1.8rem;
+  margin: 1rem 0;
 }
 
 .modal-1 {
@@ -281,8 +287,8 @@ main {
 }
 
 .modal-1 p {
-    font-size: 1.8rem;
-    margin: 1rem 0;
+  font-size: 1.8rem;
+  margin: 1rem 0;
 }
 
 .modal h1:last-of-type {
@@ -315,12 +321,11 @@ main {
   z-index: 5;
 }
 
-
 /* Score selection */
 
 .score-window {
-    display: flex;
-    margin-top: 1rem;
+  display: flex;
+  margin-top: 1rem;
 }
 
 .score-window p {
@@ -335,7 +340,7 @@ main {
   height: 20px;
   outline: none;
   border: none;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
   margin-top: 12px;
   padding: 1.2rem 0.7rem;
   background-color: #ddd;
@@ -345,14 +350,14 @@ main {
 .btn--set {
   background-color: #fff;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-  color:#000; 
+  color: #000;
   padding: 0.7rem;
   text-transform: uppercase;
   border-radius: 0.7rem;
   cursor: pointer;
   font-size: 1.8rem;
   margin-left: 1.5rem;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .btn--set:hover {
@@ -361,7 +366,7 @@ main {
 }
 
 .btn--set:active {
-  transform: translateY(3px) ;
+  transform: translateY(3px);
 }
 
 /* Player name selection */
@@ -380,7 +385,7 @@ main {
   height: 20px;
   outline: none;
   border: none;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
   margin-top: 12px;
   padding: 1.2rem 0.7rem;
   background-color: #ddd;
@@ -392,8 +397,8 @@ main {
 .table-info {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   right: 1rem;
+  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -402,17 +407,32 @@ main {
   width: 300px;
   padding: 3rem;
   text-transform: uppercase;
-
 }
 
-.info-container{
+@media only screen and (max-width: 1640px) {
+  .table-info {
+    /* left: 50%;
+    top: 100%; */
+    transform: translate(-50%, -70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+    height: 200px;
+  }
+  .main {
+    height: 60rem;
+    width: 70rem;
+  }
+}
+
+.info-container {
   display: flex;
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  
 }
 
-.info-container p:last-of-type{
+.info-container p:last-of-type {
   margin-left: 1.5rem;
 }
 
@@ -425,7 +445,9 @@ main {
   margin-left: 1.5rem;
 }
 
-.table-info tr, td, th {
+.table-info tr,
+td,
+th {
   border: 2px solid #333;
   padding: 2.5rem;
   font-size: 1.8rem;
