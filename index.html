@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="images/side-6.png">
+    <link rel="icon" type="image/png" href="images/side-6.png" />
     <title>Pig Game</title>
   </head>
   <body>
@@ -28,12 +28,15 @@
         </div>
       </section>
 
-      
       <img src="images/side-1.png" alt="Playing dice" class="dice" />
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">✋ Hold</button>
-    </main><
+      <button class="btn btn--new-media">🔄</button>
+      <button class="btn btn--roll-media">🎲</button>
+      <button class="btn btn--hold-media">✋</button>
+    </main>
+    <
 
     <button class="show-modal">❔ Rules</button>
     <button class="show-modal-1">❗ Options</button>
@@ -43,7 +46,7 @@
         <p class="target">🎯 Score Target:</p>
         <p id="score-target">score</p>
       </div>
-      <div class="info-container">
+      <div class="info-container info-container--2">
         <p>🏆 Games won:</p>
       </div>
       <div>
@@ -66,7 +69,10 @@
       <p>🎯Select your score target</p>
       <p>🎲 Roll the dice</p>
       <p>✋ Hold the current value to add it to your global score</p>
-      <p>🍀 Or roll the dice again if you feel lucky and want to increase your current value</p>
+      <p>
+        🍀 Or roll the dice again if you feel lucky and want to increase your
+        current value
+      </p>
       <p>❗❗ If you roll a 1 you will lose your current value</p>
       <p>🏆 First player to reach the score target wins</p>
       <!-- <h1>Tips</h1>
@@ -80,21 +86,30 @@
       <h1>🎯 Select your score target:</h1>
       <div class="score-window">
         <p class="score-window__title">Score:</p>
-        <input class="select-score" type="text" value="20">
+        <input class="select-score" type="text" value="20" />
         <button class="btn--set">Set!</button>
       </div>
       <h1>👽 Enter the name of the players:</h1>
       <div class="player-container">
         <p>Player 1:</p>
-        <input id="select-name-0" class="select-player" type="text" placeholder="Enter a name">
+        <input
+          id="select-name-0"
+          class="select-player"
+          type="text"
+          placeholder="Enter a name"
+        />
         <button id="btn--set0" class="btn--set">Set!</button>
       </div>
       <div class="player-container">
         <p>Player 2:</p>
-        <input id="select-name-1" class="select-player" type="text" placeholder="Enter a name">
+        <input
+          id="select-name-1"
+          class="select-player"
+          type="text"
+          placeholder="Enter a name"
+        />
         <button id="btn--set1" class="btn--set">Set!</button>
       </div>
-      
     </div>
 
     <div class="overlay hidden"></div>
