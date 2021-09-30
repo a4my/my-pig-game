@@ -143,9 +143,9 @@ main {
   top: 46.1rem;
 }
 
-.btn--new-media,
-.btn--roll-media,
-.btn--hold-media {
+.btn--new-query,
+.btn--roll-query,
+.btn--hold-query {
   display: none;
 }
 
@@ -444,6 +444,8 @@ th {
   width: 100%;
 }
 
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 1640px) {
   .table-info {
     left: 50%;
@@ -491,9 +493,14 @@ th {
     width: 75rem;
     height: 55rem;
   }
+
+  .modal,
+  .modal-1 {
+    width: 60%;
+  }
 }
 
-@media only screen and (max-height: 790px) and (max-width: 820px) {
+@media only screen and (max-height: 790px) and (max-width: 1641) {
   .table-info {
     width: 60rem;
   }
@@ -521,23 +528,15 @@ th {
     padding: 1rem 1rem;
     line-height: 02.4rem;
   }
-  .btn--new-media {
-    display: block;
+
+  .btn--new {
     top: 1rem;
   }
-  .btn--roll-media {
-    display: block;
+  .btn--roll {
     top: 32rem;
   }
-  .btn--hold-media {
-    display: block;
-    top: 38rem;
-  }
-
-  .btn--new,
-  .btn--roll,
   .btn--hold {
-    display: none;
+    top: 38rem;
   }
 
   .dice {
@@ -547,5 +546,125 @@ th {
 
   .info-container--2 {
     display: none;
+  }
+}
+
+/* @media only screen and (max-height: 790px)  {
+  .table-info {
+    width: 150px;
+  }
+  .info-container--2 {
+    display: block;
+  }
+} */
+
+@media only screen and (max-width: 820px) {
+  .table-info {
+    width: 60rem;
+  }
+
+  main {
+    width: 60rem;
+    height: 45rem;
+  }
+
+  .player {
+    padding: 4rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .score {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    line-height: 02.4rem;
+  }
+
+  .btn--new {
+    top: 1rem;
+  }
+  .btn--roll {
+    top: 32rem;
+  }
+  .btn--hold {
+    top: 38rem;
+  }
+
+  .dice {
+    top: 9rem;
+    height: 8rem;
+  }
+
+  .info-container--2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .table-info {
+    width: 47rem;
+  }
+
+  main {
+    width: 47rem;
+    height: 50rem;
+  }
+
+  .player {
+    padding: 8rem 2rem 5rem 2rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+    padding: 0.8rem 0.8rem;
+    line-height: 1.6rem;
+  }
+
+  .btn--new {
+    top: 2rem;
+  }
+  .btn--roll {
+    top: 35rem;
+  }
+  .btn--hold {
+    top: 40rem;
+  }
+
+  .dice {
+    top: 12rem;
+    height: 8rem;
+  }
+
+  .current {
+    width: 55%;
+  }
+
+  .current-score {
+    font-size: 2.5rem;
+  }
+
+  .info-container--1 {
+    display: none;
+  }
+
+  .modal,
+  .modal-1 {
+    width: 80%;
   }
 }
