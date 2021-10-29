@@ -12,9 +12,9 @@ This repository contains the files of my own version of the Pig Game! This game 
 This project was build using HTML, CSS, and a lot of JavaScript! 😁
 
 ## Extra learning ✔
-I also wanted to implement modal windows using JavaScript and to create a leaderboard using JS as well.
+I also wanted to practice creating modal windows and to create a leaderboard using JS as well.
 
-## Responsiveness ❕
+## Responsiveness 📱
 This project is also responsive on any device screen, so I can play this game with friends on the bus, on a plane or anywhere else!
 
 ### Author: [Alex Fourmy](https://www.linkedin.com/in/alex-fourmy/)
