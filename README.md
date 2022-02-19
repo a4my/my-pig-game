@@ -1,6 +1,6 @@
 # my-pig-game 🐽
 
-This repository contains the files of my own version of the Pig Game! This game was one of the very first JavaScript tutorial I followed and I wanted to create my own version and add a few "improvements" such as a leaderboard and a window rule. 
+This project is my own version of the famous Pig game and it is one the very first JavaScript project I did alone. I actually take pride in implementing a leaderboard and a modal to set the rules of the game and the names of the two players!
 
 ## Demo 🖥 [live preview](https://a4my.github.io/my-pig-game/)
 
